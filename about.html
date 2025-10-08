@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+        }
+        .vid{
+            border: 100px;
+            border-color: black solid ;
+            flex-wrap: nowrap;
+            
+        }
+        ul img{
+            display: flex;
+            flex-grow: calc(0);
+            width: 7%;
+            height: auto;
+            margin-right: -4%;
+            padding: 0%;
+            align-items: start;
+            border-radius: 40px;
+            justify-items: start;
+            
+            margin-top: -1%;
+        }
+                ul {
+  display: flex;
+  justify-content: end;
+  padding-right: 4%;
+  padding-top: 1.3%;
+  padding-bottom: 1.3%;
+  padding-left: ;
+  align-items: start;
+}
+
+ul li {
+    font-weight: lighter;
+    font-size: 110%;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 0%;
+    margin-left: 3%;
+    padding-bottom: 0.3%;
+  list-style: none;
+  /* padding-left: 3%; */
+  padding-right: 0.5%;
+  padding-top: 1.6%;
+  position: relative; /* 👈 important for ::after */
+}
+ul li a{
+    text-decoration: none; /* remove underline */
+    color: black;          /* link color */
+    font-size: 18px;
+}
+
+ul li:hover {
+    /* padding-left: 1%; */
+  cursor: pointer;
+  color: rgb(34, 34, 34);
+}
+
+ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0; /* 👈 stays at bottom of li */
+  height: 2px;
+  width: 0;
+  background-color: rgb(0, 0, 0);
+  transition: width 0.4s ease;
+}
+
+ul li:hover::after {
+  width: 94%; /* 👈 full underline for each li */
+}
+        .log{
+            padding-right: 59%;
+            padding-top: 0%;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            display: block;
+            padding-bottom: -10%;
+            line-height: 22px;
+            margin-top: 0.8%;
+        }
+        .log h1{
+            margin-left: 32.5%;
+        }
+        .log h5{
+            font-size: small;
+            font-weight: 500;
+            padding-top: -3%;
+            letter-spacing: 7.2px;
+            padding-left: 26.5%;
+            margin-left: 8%;
+        }
+        .announcement-bar {
+      /* position: fixed; */
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #111;
+      color: white;
+      overflow: hidden;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    /* Slide wrapper */
+    .announcement-slider {
+      display: flex;
+      width: 200%; /* 2 slides */
+      animation: slide 6s infinite;
+    }
+
+    /* Each message */
+    .announcement-slide {
+      flex: 0 0 100%;
+      text-align: center;
+      font-size: 16px;
+      line-height: 40px;
+    }
+
+    /* Animation */
+    @keyframes slide {
+      0% { transform: translateX(0%); }
+      40% { transform: translateX(0%); }
+      50% { transform: translateX(-100%); }
+      90% { transform: translateX(-100%); }
+      100% { transform: translateX(0%); }
+    }
+    .foot{
+        display: block;
+        width: 100%;
+        height: -10%;
+        color: #bdbcbc;
+        background-color: #d8d7d7;
+        padding-top: 9%;
+        padding-bottom: 5%;
+        margin-top: 11%;
+    }
+    .foot img{
+        width: 16%;
+        height: auto;
+        margin-top: -8%;
+        margin-bottom: 10%;
+    }
+    #return{
+        color: #000000;
+        padding-left: 21%;
+        margin-top: -24%;
+        font-size: 85%;
+        font-weight: lighter;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #return:hover{
+        cursor: pointer;
+        color: rgb(10, 10, 10);
+    }
+    #track{
+        color: #000000;
+        padding-left: 21%;
+        margin-top: 1.4%;
+        font-size: 85%;
+        font-weight: lighter;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #track:hover{
+        cursor: pointer;
+        color: rgb(10, 10, 10);
+    }
+    #about{
+        color: #000000;
+        padding-left: 21%;
+        margin-top: 1.4%;
+        font-size: 85%;
+        font-weight: lighter;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #about:hover{
+        cursor: pointer;
+        color: rgb(0, 0, 0);
+    }
+    #conta{
+        color: #000000;
+        padding-left: 21%;
+        margin-top: 1.4%;
+        font-size: 85%;
+        font-weight: 10;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #conta:hover{
+        cursor: pointer;
+        color: black;
+    }
+    #blog{
+        color: #000000;
+        padding-left: 21%;
+        margin-top: 1.4%;
+        font-size: 85%;
+        font-weight: 10;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #blog:hover{
+        cursor: pointer;
+        color: black;   
+    }
+    #refu{
+        color: #000000;
+        padding-left: 21%;
+        margin-top: 1.4%;
+        font-size: 85%;
+        font-weight: 10;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #refu:hover{
+        cursor: pointer;
+        color: black; 
+    }
+    #terms{
+        color: #000000;
+        padding-left: 21%;
+        margin-top: 1.4%;
+        font-size: 85%;
+        font-weight: 10;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #terms:hover{
+        cursor: pointer;
+        color: black; 
+    }
+    #sea{
+        color: #000000;
+        padding-left: 21%;
+        margin-top: 1.4%;
+        font-size: 85%;
+        font-weight: 10;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #sea:hover{
+        cursor: pointer;
+        color: black; 
+    }
+    #best{
+        margin-top: 5%;
+        margin-bottom: -7%;
+        /* margin-left: 43%; */
+        text-align: center;
+        color: #000000;
+        font-size: 230%;
+        font-family: "Didot", "Bodoni MT", "Times New Roman", Arial, 'Playfair Display', Helvetica, sans-serif;
+        letter-spacing: 1px;
+    }
+    .bgb1{
+        max-width: 21%;
+        border: #000000 solid;
+        height: auto;
+        z-index: 1;
+        background-color: var(--colorGridOverlay);
+        opacity: var(--colorGridOverlayOpacity););
+    }
+    #sign{
+        color: #000000;
+        padding-left: 40%;
+        margin-top: -20%;
+        font-size: 89%;
+        font-weight: bold;
+        letter-spacing: 5px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #sub{
+        color: #000000;
+        padding-left: 40%;
+        margin-top: 1.4%;
+        font-size: 85%;
+        font-weight: 10;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #sub:hover{
+        cursor: pointer;
+        color: black; 
+    }
+    .input-container {
+      display: flex;
+      align-items: center;
+       /* underline */
+      width: 300px; /* adjust width */
+      padding: 5px 0;
+      padding-left: 40%;
+      margin-top: 2%;
+    }
+
+    .input-container input {
+      border: none;
+      outline: none;
+      flex: 1;
+      font-size: 83%;
+      font-weight: 10;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      border-bottom: 2px solid black ;
+      width: 300%;
+      padding-bottom: 5%;
+      background-color: #d8d7d7;
+    }
+
+    .input-container input::placeholder {
+      color: black;
+    }
+    .face{
+        margin-left: 40%;
+        margin-top: 6%;
+    }
+    .face img{
+        width: 4%;
+        height: auto;
+    }
+    .face img:hover{
+        cursor: pointer;
+    }
+    .cam img{
+        width: 4%;
+        height: auto;
+    }
+    .cam img:hover{
+        cursor: pointer;
+    }
+    .cam{
+        margin-left: 44%;
+        margin-top: -4%;
+    }
+    .tik{
+        margin-left: 48%;
+        margin-top: -3.9%;
+    }
+    .tik img{
+        width: 4%;
+        height: auto;
+    }
+    .tik img:hover{
+        cursor: pointer;
+    }
+    .talk{
+        color: #000000;
+        padding-left: 73%;
+        margin-top: -19.5%;
+        margin-left: ;
+        font-size: 89%;
+        font-weight: bold;
+        letter-spacing: 5px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .chat{
+        color: #000000;
+        padding-left: 73%;
+        margin-top: 1.4%;
+        font-size: 85%;
+        font-weight: light;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .mon{
+        color: #000000;
+        padding-left: 73%;
+        margin-top: 1.4%;
+        font-size: 85%;
+        font-weight: light;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .addr{
+        color: #000000;
+        padding-left: 73%;
+        margin-top: 1.4%;
+        font-size: 85%;
+        font-weight: light;
+        line-height: 160%;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .numb{
+        color: #000000;
+        padding-left: 73%;
+        margin-top: 1.4%;
+        font-size: 85%;
+        font-weight: light;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .cust{
+        color: #000000;
+        padding-left: 73%;
+        margin-top: 1.4%;
+        font-size: 85%;
+        font-weight: light;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .copy{
+        color: #000000;
+        /* padding-left: 53%; */
+        text-align: center;
+        margin-top: 8%;
+        font-size: 12.6px;
+        font-weight: light;
+        font-family: "Twentieth Century", sans-serif;
+        font-weight: lighter;
+    }
+    #first{
+        font-size: 350%;
+        font-weight: 300;
+        margin-left: 12%;
+        padding-top: 9%;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    #you{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding-left: 11.7%;
+        font-size: 115%;
+        font-weight: 400;
+        letter-spacing: 0.1cm;
+    }
+    #introd{
+        padding-left: 11.8%;
+        padding-top: 2%;
+        padding-bottom: 7%;
+        font-size: 85%;
+        font-weight: lighter;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .uss{
+        background-color: #ebebeb;
+        margin-top: -1%;
+    }
+    .uss img{
+        margin-left: 52%;
+        margin-top: -22%;
+        width: 17%;
+        margin-bottom: 3%;
+    }
+    .story img{
+        width: 27%;
+        margin-left: 12%;
+        margin-top: -10%;
+        border-radius: 2%;
+    }
+    .story h2{
+        margin-left: 42%;
+        padding-top: 5%;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .story p{
+        margin-left: 42%;
+        padding-top: 1%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        line-height: 130%;
+    }
+    .why h1{
+        text-align: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin-top: 3%;
+    }
+    .doll{
+        display: inline;
+    }
+    .doll img{
+        margin-left: 15%;
+        margin-right: 3%;
+        margin-top: 2%;
+        margin-bottom: 1%;
+    }
+    .doll h3{
+        display: inline;
+        
+        /* margin-left: 10%; */
+        /* margin-right: 4.3%; */
+        /* margin-top: 30%; */
+        /* padding-top: 50%; */
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 105%;
+    }
+    .doll h4{
+        display: inline;
+    }
+    #aff{
+        padding-left: 10.3%;
+    }
+    #lat{
+        padding-left: 13.8%;
+    }
+    #fast{
+        padding-left: 14.6%;
+    }
+    #trust{
+        display: block;
+        padding-left: 78.4%;
+        margin-top: -1%;
+    }
+    /* #aff{
+        padding-left: 0.5%;
+    } */
+    .watch img{
+        margin-left: 35%;
+        margin-bottom: 90%;
+    }
+    .watch{
+        display: inline;
+    }
+    #best{
+        font-size: 90%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        padding-left: 9%;
+    }
+    #trend{
+        font-size: 90%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        padding-left: 11.6%;
+    }
+    #trend span{
+        display: block;
+        padding-left: 34.9%;
+    }
+    #nation{
+        font-size: 90%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        padding-left: 55%;
+        margin-top: -3%;
+    }
+    #custom{
+        font-size: 90%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        padding-left: 79%;
+        margin-top: -1%;
+    }
+    #custom span{
+        display: block;
+        padding-left: 4%;
+    }
+    .get h1{
+        text-align: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin-top: 3%;
+    }
+    .call img{
+        padding-top: 2%;
+        padding-left: 38%;
+        margin-top: 2.5%;
+        width: 5.2%;
+        margin-left: 9%;
+    }
+    .call p{
+        padding-left: 38%;
+        width: 30%;
+        font-size: 125%;
+        margin-left: 16%;
+        margin-top: -4.5%;
+    }
+.mail p{
+        font-size: 108%;
+        margin-left: 54%;
+        margin-top: -4.5%;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .mail img{
+        padding-left: 37%;
+        padding-top: 1%;
+        margin-top: 2.4%;
+        width: 5.4%;
+        margin-left: 10%;
+    }
+    .location p{
+        padding-left: 40%;
+        font-size: 94%;
+        margin-left: 14%;
+        margin-top: -5.4%;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .location img{
+        padding-left: 36.6%;
+        margin-top: 2.8%;
+        margin-left: 10%;
+        width: 5.5%
+    }
+    .call{
+        width: 10%;
+        display: inline;
+    }
+    .contact-box{
+        
+        margin-top: 4%;
+    }
+    .contact-box input {
+    margin-left: 50%;
+    display: block;
+      width: 22%;
+      padding: 12px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      background: #f3f7fa;
+    }
+    .contact-box button {
+        margin-left: 50%;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 6px;
+      background: #222;
+      color: white;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+      display: block;
+      margin-top: 5px;
+    }
+
+    .contact-box button:hover {
+      background: #444;
+    }
+    #name{
+        margin-top: 3%;
+    }
+    .infor{
+        margin-top: -17.2%;  
+        width: 50%; 
+    }
+    </style>
+</head>
+<body>
+    <div class="announcement-bar">
+    <div class="announcement-slider">
+      <div class="announcement-slide">🚀 Free Delivery on Orders Above PKR 2000</div>
+      <div class="announcement-slide">🎉 Big Sale! Smartwatches Starting from PKR 2200</div>
+    </div>
+  </div>
+    <div class="vid">
+        <ul>
+            <img src="./gadiy-removebg-preview.png" alt="log">
+            <div class="log"><h1>GHADIYAN</h1><h5>Smartwatches</h5></div>
+            <li> <a href="try.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="respons.html">Offers    </a></li>
+        </ul>
+    </div>
+    <div class="uss">
+        <div id="first">About Ghadiyan</div>
+        <div id="you">Smartwatches That Define Time</div>
+        <div id="introd">At Ghadiyan.com, we bring you the latest and trendest smartwatches <br> at affordable prices in Pakistan, Style meets technology-right on your wrist</div>
+        <img src="./first.png" alt="">
+    </div>
+    <div class="story">
+        <h2>Our Story</h2>
+        <p>We started Ghadiyan with one vision-to make premium <br> smartwatches accessible for every one in Pakistan. <br> From fitness tracking to style statements, we carefully <br> handpick watches that match your lifestyle and budget. </p>
+        <img src="./story.png" alt="">
+
+    </div>
+    <div class="why">
+        <h1>Why Choose Ghadiyan?</h1>
+    </div>
+    <div class="doll">
+        <img src="./dollar.png.jpeg" alt="">
+        <img src="./watch.jpeg" alt="">
+        <img src="./delivery.jpeg" alt="">
+        <img src="./hands.jpeg" alt="">
+        <h3 id="aff">Affordable Prices</h3>
+        <h3 id="lat">Latest Models</h3>
+        <h3 id="fast">Fast Delivery</h3>
+        <h3 id="trust">Trusted Service</h3>
+        <h4 id="best">Best Value In Pakistan</h4>
+        <h4 id="trend">Trendy, stylish and <span> feature-rich </span></h4>
+    </div>
+    <div class="watch">
+        <h4 id="nation">Nationwide shipping</h4>
+        <h4 id="custom">100% customer <span> satisfication </span></h4>
+    
+    </div>
+    <div class="get">
+        <h1>Get in Touch</h1>
+    </div>
+    <div class="contact-box">
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="text" id="message" placeholder="Message" required>
+      <button type="submit">Send</button>
+    </form>
+    </div>
+    <div class="infor">
+    <div class="call">
+        <img src="./call.png" alt="">
+        <p>+92 309-2166701 </p>
+        
+    </div>
+    <div class="mail">
+        <img src="./mail.png" alt="">
+        <p>helloghadiyan@gmail.com</p>
+    </div>
+    <div class="location">
+        <img src="./location.png" alt="">
+        <p>Block 3 KDA Market Gulshan e Iqbal <br> Near Flourish Salon Karachi</p>
+    </div>
+    </div>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      this.reset(); // clear inputs
+      alert("✅ Your message has been sent!");
+    });
+  </script>
+    <div class="foot">
+    <img src="./gadiy-removebg-preview.png" alt="">
+    <div id="return">Return & Exchange Policy</div>
+    <div id="track">Track Order</div>
+    <div id="about">About Us</div>
+    <div id="conta">Contact Us</div>
+    <div id="blog">Blog</div>
+    <div id="refu">Refund Policy</div>
+    <div id="terms">Terms Of Policy</div>
+    <div id="sea">Search</div>
+    <div id="sign">SIGN UP AND SAVE</div>
+    <div id="sub">Subscribe to get special offers, free giveaways, and <br> once-in-a-lifetime deals.</div>
+    <div class="input-container">
+    <input type="email" placeholder="Enter your email">
+    <span class="icon"></span> <!-- email icon -->
+    </div>
+    <div class="face">
+        <img src="./facebook-circular-logo_20673.png" alt="">
+    </div>
+    <div class="cam">
+        <a href="https://www.instagram.com/ghadiyan_com"><img src="./camera_15047558.png" alt=""></a>
+    </div>
+    <div class="tik">
+        <img src="./tik-tok_3046120.png" alt="">
+    </div>
+    <div class="talk">
+        TALK TO US
+    </div>
+    <div class="chat">
+        Chat With Us
+    </div>
+    <div class="mon">
+        Monday - Saturday: 10am-10pm 
+    </div>
+    <div class="addr">
+        Address: A219 block 3 KDA Market Gulshan e <br> Iqbal Near Flourish Salon Karachi 
+    </div>
+    <div class="numb">
+        WhatsApp us: +92 309 2166701
+    </div>
+    <div class="cust">
+        Customer Support: helloghadiyan@gmail.com
+    </div>
+    <div class="copy">
+        © 2025 Ghadiyan
+    </div>
+</body>
+</html>

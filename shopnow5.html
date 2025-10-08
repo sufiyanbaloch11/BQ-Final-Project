@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0%;
+            p
+        }
+        ul {
+  display: flex;
+  justify-content: end;
+  padding-right: 4%;
+  padding-top: 1.3%;
+  padding-bottom: 1.3%;
+  padding-left: ;
+  align-items: start;
+}
+
+ul li {
+    font-weight: lighter;
+    font-size: 110%;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 0%;
+    margin-left: 3%;
+    padding-bottom: 0.3%;
+  list-style: none;
+  padding-right: 0.5%;
+  padding-top: 1.6%;
+  position: relative;
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+ul li:hover {
+  cursor: pointer;
+  color: rgb(34, 34, 34);
+}
+
+ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0; 
+  height: 2px;
+  width: 0;
+  background-color: rgb(0, 0, 0);
+  transition: width 0.4s ease;
+}
+
+ul li:hover::after {
+  width: 94%; 
+}
+
+         
+    .vot{
+            display: flex;
+            padding-right: 2%;
+            width: 10%;
+            height: 100%;
+            margin: 0%;
+            flex-wrap: wrap;
+            justify-items: start;
+            margin-top: 0%;
+            margin-left: 5%;
+            z-index: 2;
+        }
+        .vid{
+            border: 100px;
+            border-color: black solid ;
+            flex-wrap: nowrap;
+            
+        }
+        ul img{
+            display: flex;
+            flex-grow: calc(0);
+            width: 7%;
+            height: auto;
+            margin-right: -4%;
+            align-items: start;
+            border-radius: 40px;
+            justify-items: start;
+            padding-left: 1000%;
+            margin-top: -1%;
+        }
+        .log{
+            padding-right: 59%;
+            padding-top: 0%;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            display: block;
+            padding-bottom: -10%;
+            line-height: 22px;
+            margin-top: 0.8%;
+        }
+        .log h1{
+            margin-left: 32.5%;
+        }
+        .log h5{
+            font-size: small;
+            font-weight: 500;
+            padding-top: -3%;
+            letter-spacing: 7.2px;
+            padding-left: 26.5%;
+            margin-left: 8%;
+        }
+        .announcement-bar {
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #111;
+      color: white;
+      overflow: hidden;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .announcement-slider {
+      display: flex;
+      width: 200%; /* 2 slides */
+      animation: slide 6s infinite;
+    }
+
+    .announcement-slide {
+      flex: 0 0 100%;
+      text-align: center;
+      font-size: 16px;
+      line-height: 40px;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0%); }
+      40% { transform: translateX(0%); }
+      50% { transform: translateX(-100%); }
+      90% { transform: translateX(-100%); }
+      100% { transform: translateX(0%); }
+    }
+
+    .foot{
+        display: block;
+        width: 100%;
+        height: -10%;
+        color: #bdbcbc;
+        background-color: #d8d7d7;
+        padding-top: 9%;
+        padding-bottom: 5%;
+        margin-top: -0.4%;
+    }
+    .foot img{
+        width: 16%;
+        height: auto;
+        margin-top: -8%;
+        margin-bottom: 10%;
+    }
+    #return{
+        color: #000000;
+        padding-left: 21%;
+        margin-top: -24%;
+        font-size: 85%;
+        font-weight: lighter;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #return:hover{
+        cursor: pointer;
+        color: rgb(10, 10, 10);
+    }
+    #track{
+        color: #000000;
+        padding-left: 21%;
+        margin-top: 1.4%;
+        font-size: 85%;
+        font-weight: lighter;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #track:hover{
+        cursor: pointer;
+        color: rgb(10, 10, 10);
+    }
+    #about{
+        color: #000000;
+        padding-left: 21%;
+        margin-top: 1.4%;
+        font-size: 85%;
+        font-weight: lighter;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #about:hover{
+        cursor: pointer;
+        color: rgb(0, 0, 0);
+    }
+    #conta{
+        color: #000000;
+        padding-left: 21%;
+        margin-top: 1.4%;
+        font-size: 85%;
+        font-weight: 10;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #conta:hover{
+        cursor: pointer;
+        color: black;
+    }
+    #blog{
+        color: #000000;
+        padding-left: 21%;
+        margin-top: 1.4%;
+        font-size: 85%;
+        font-weight: 10;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #blog:hover{
+        cursor: pointer;
+        color: black;   
+    }
+    #refu{
+        color: #000000;
+        padding-left: 21%;
+        margin-top: 1.4%;
+        font-size: 85%;
+        font-weight: 10;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #refu:hover{
+        cursor: pointer;
+        color: black; 
+    }
+    #terms{
+        color: #000000;
+        padding-left: 21%;
+        margin-top: 1.4%;
+        font-size: 85%;
+        font-weight: 10;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #terms:hover{
+        cursor: pointer;
+        color: black; 
+    }
+    #sea{
+        color: #000000;
+        padding-left: 21%;
+        margin-top: 1.4%;
+        font-size: 85%;
+        font-weight: 10;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #sea:hover{
+        cursor: pointer;
+        color: black; 
+    }
+    #best{
+        margin-top: 5%;
+        margin-bottom: -7%;
+        /* margin-left: 43%; */
+        text-align: center;
+        color: #000000;
+        font-size: 230%;
+        font-family: "Didot", "Bodoni MT", "Times New Roman", Arial, 'Playfair Display', Helvetica, sans-serif;
+        letter-spacing: 1px;
+    }
+    .bgb1{
+        max-width: 21%;
+        border: #000000 solid;
+        height: auto;
+        z-index: 1;
+        background-color: var(--colorGridOverlay);
+        opacity: var(--colorGridOverlayOpacity););
+    }
+    #sign{
+        color: #000000;
+        padding-left: 40%;
+        margin-top: -20%;
+        font-size: 89%;
+        font-weight: bold;
+        letter-spacing: 5px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #sub{
+        color: #000000;
+        padding-left: 40%;
+        margin-top: 1.4%;
+        font-size: 85%;
+        font-weight: 10;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #sub:hover{
+        cursor: pointer;
+        color: black; 
+    }
+
+    #emai input{
+      width: 110%;
+    }
+
+    #selec select{
+      width: 116%;
+    }
+    .input-container {
+      display: flex;
+      align-items: center;
+       /* underline */
+      width: 300px; /* adjust width */
+      padding: 5px 0;
+      padding-left: 40%;
+      margin-top: 2%;
+    }
+
+    .input-container input {
+      border: none;
+      outline: none;
+      flex: 1;
+      font-size: 83%;
+      font-weight: 10;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      border-bottom: 2px solid black ;
+      width: 300%;
+      padding-bottom: 5%;
+      background-color: #d8d7d7;
+    }
+
+    .shipping-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 12px 20px;
+  width: 435px;        /* you can adjust width */
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.shipping-box:hover {
+  background-color: #f1f1f1;
+  border-color: #999;
+}
+
+.shipping-type {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+.shipping-price {
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+}
+
+
+    .input-container input::placeholder {
+      color: black;
+    }
+    .face{
+        margin-left: 40%;
+        margin-top: 6%;
+    }
+    .face img{
+        width: 4%;
+        height: auto;
+    }
+    .face img:hover{
+        cursor: pointer;
+    }
+    .cam img{
+        width: 4%;
+        height: auto;
+    }
+    .cam img:hover{
+        cursor: pointer;
+    }
+    .cam{
+        margin-left: 44%;
+        margin-top: -4%;
+    }
+    .tik{
+        margin-left: 48%;
+        margin-top: -3.9%;
+    }
+    .tik img{
+        width: 4%;
+        height: auto;
+    }
+    .tik img:hover{
+        cursor: pointer;
+    }
+    .talk{
+        color: #000000;
+        padding-left: 73%;
+        margin-top: -19.5%;
+        margin-left: ;
+        font-size: 89%;
+        font-weight: bold;
+        letter-spacing: 5px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .chat{
+        color: #000000;
+        padding-left: 73%;
+        margin-top: 1.4%;
+        font-size: 85%;
+        font-weight: light;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .mon{
+        color: #000000;
+        padding-left: 73%;
+        margin-top: 1.4%;
+        font-size: 85%;
+        font-weight: light;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .addr{
+        color: #000000;
+        padding-left: 73%;
+        margin-top: 1.4%;
+        font-size: 85%;
+        font-weight: light;
+        line-height: 160%;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .numb{
+        color: #000000;
+        padding-left: 73%;
+        margin-top: 1.4%;
+        font-size: 85%;
+        font-weight: light;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .cust{
+        color: #000000;
+        padding-left: 73%;
+        margin-top: 1.4%;
+        font-size: 85%;
+        font-weight: light;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .copy{
+        color: #000000;
+        /* padding-left: 53%; */
+        text-align: center;
+        margin-top: 8%;
+        font-size: 12.6px;
+        font-weight: light;
+        font-family: "Twentieth Century", sans-serif;
+        font-weight: lighter;
+    }
+    .checkout-container {
+      
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 0px;
+      padding: 5px 5%;
+      flex-wrap: wrap;
+      margin-left: 14%;
+    }
+
+    /* Left side form */
+    .checkout-form {
+      background: #fff;
+      padding: 30px;
+      margin-left: -20%;
+      margin-right: 20%;
+      
+      width: 40%;
+      min-width: 300px;
+      background-color: #ffffff;
+    }
+
+    .bdcolo{
+        border-left: #838383 solid 1px;
+        margin-left: 0%;
+        margin-top: -0.4%;
+        position: ;
+    }
+
+    
+
+
+    .checkout-form h2 {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin-bottom: 20px;
+      font-size: 22px;
+    }
+
+    .checkout-form input,
+    .checkout-form select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    #lname input{
+      margin-left: 16%;
+    }
+
+    .checkout-form .row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .checkout-form .row input {
+      flex: 1;
+    }
+
+    #pho{
+      width: 110%;
+    }
+
+    #cit input{
+      width: 104%;
+    }
+
+    #posta input{
+      margin-left: 16%;
+      width: 104%;
+    }
+
+    #addre input{
+      width: 110%;
+    }
+
+    #appart input{
+      width: 110%;
+    }
+
+    .row input {
+      width: 104%;
+    }
+
+    .checkout-form label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    /* Right side summary */
+    .summary {
+      margin-top: 5%;
+      background: #fff;
+      padding: 30px;
+      border-radius: 1px;
+      width: 35%;
+      height: 500%;
+      min-width: 280px;
+      /* border-left: #999999 solid 2px; */
+    }
+
+    .summary-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 15px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    #subtotal p span{
+      margin-left: 50%;
+    }
+
+    #shippin p span{
+      padding-left: 54%;
+    }
+
+    .summary-item img {
+      width: 60px;
+      border-radius: 8px;
+    }
+
+    .summary-total {
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 5%;
+      padding-bottom: 210%;
+    }
+
+    .summary-total span{
+      margin-left: 50.5%;
+    }
+
+    .checkout-btn {
+      width: 116%;
+      background: black;
+      color: white;
+      border: none;
+      padding: 15px;
+      font-size: 16px;
+      border-radius: 7px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    .checkout-btn:hover {
+      background: #141414;
+    }
+
+    /* Responsive layout for mobile */
+    @media (max-width: 850px) {
+      .checkout-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 5%;
+      }
+
+      .checkout-form, .summary {
+        width: 100%;
+      }
+
+      .checkout-form {
+        order: 1;
+      }
+
+      .summary {
+        order: 2;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .checkout-form input, .checkout-form select {
+        font-size: 14px;
+        padding: 10px;
+      }
+
+      .checkout-btn {
+        padding: 12px;
+        font-size: 15px;
+      }
+
+      .checkout-form h2 {
+        font
+        font-size: 20px;
+      }
+
+      .checkout-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 50px 5%;
+      flex-wrap: wrap;
+    }
+
+    /* Left: Payment form */
+    .payment-form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      width: 55%;
+      min-width: 300px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .shipping-method,
+    .payment-method,
+    .billing-address {
+      margin-bottom: 30px;
+    }
+    
+
+    .option-box {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      background: #f9f9f9;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .option-box:hover {
+      border-color: #000;
+    }
+
+    .radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .complete-order-btn {
+      width: 100%;
+      background: black;
+      color: white;
+      border: none;
+      padding: 15px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    .complete-order-btn:hover {
+      background: #333;
+    }
+
+    /* Right summary section */
+    .summary {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      width: 35%;
+      min-width: 280px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .summary-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 15px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .summary-item img {
+      width: 60px;
+      border-radius: 8px;
+    }
+
+    .summary-total {
+      font-weight: bold;
+      font-size: 18px;
+      text-align: right;
+    }
+    }
+    @media (max-width: 850px) {
+      .checkout-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 5%;
+      }
+
+      .payment-form, .summary {
+        width: 100%;
+      }
+    }
+
+    .vid hr{
+        margin-top: -1%;
+    }
+
+    .shipping h2{
+      margin-top: 2%;
+    }
+    
+    .payment h2{
+      margin-top: 5%;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="announcement-bar">
+    <div class="announcement-slider">
+      <div class="announcement-slide">🚀 Free Delivery on Orders Above PKR 2000</div>
+      <div class="announcement-slide">🎉 Big Sale! Smartwatches Starting from PKR 2200</div>
+    </div>
+  </div>
+    <div class="vid">
+        <ul>
+            <img src="./gadiy-removebg-preview.png" alt="log">
+            <div class="log"><h1>GHADIYAN</h1><h5>Smartwatches</h5></div>
+            <li> <a href="try.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="respons.html">Offers</a></li>
+        </ul>
+        <hr>
+        
+    </div>
+
+    <div class="checkout-container">
+    <!-- Left: Customer Form -->
+    <div class="checkout-form">
+      <h2>Contact</h2>
+      <div id="emai"><input type="email" placeholder="Email or mobile phone number" /></div>
+    <div id="selec">
+      <h2>Delivery</h2>
+      <select>
+        <option>Pakistan</option>
+        <option>India</option>
+        <option>UAE</option>
+      </select>
+    </div>
+      <div class="row">
+        <div id="fname"><input type="text" placeholder="First name" /></div>
+        <div id="lname"><input type="text" placeholder="Last name" /></div>
+      </div>
+
+      <div id="addre"><input type="text" placeholder="Address" /></div>
+      <div id="appart"><input type="text" placeholder="Apartment, suite, etc. (optional)" /></div>
+
+      <div class="row">
+        <div id="cit"><input type="text" placeholder="City" /></div>
+        <div id="posta"><input type="text" placeholder="Postal code (optional)" /></div>
+      </div>
+
+      <div id="pho"><input type="text" placeholder="Phone" /></div>
+      
+      <div class="shipping">
+        <h2>Shipping method</h2>
+        <div class="shipping-box">
+            <span class="shipping-type"><b>Standard</b></span>
+            <span class="shipping-price">Rs 200.00</span>
+        </div>
+
+      </div>
+
+      <div class="payment">
+        <h2>Payment</h2>
+        <div class="shipping-box">
+            <span class="shipping-type"><b>Cash on Delivery(COD)</b></span>
+        </div>
+
+      </div>
+
+      <button class="checkout-btn">Complete order</button>
+    </div>
+
+    <div class="bdcolo">
+    <!-- Right: Summary -->
+    <div class="summary">
+      <div class="summary-item">
+        <img src="offer1.png" alt="Product" />
+        <div>
+          <p><strong>Crown 7+2 Ultra Smartwatch</strong></p>
+          <p>For Men</p>
+        </div>
+        <p>Rs.2,800.00</p>
+      </div>
+      <div>
+        <div id="subtotal"><p>Subtotal: <span> Rs.2,800.00 </span></p> </div>
+        <div id="shippin"><p>Shipping:<span>Rs.200.00</span></p></div>
+        <p class="summary-total">Total: <span>Rs.3,999.00</span></p>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  
+    </div>
+
+    
+  </div>
+
+
+    <div class="foot">
+    <img src="./gadiy-removebg-preview.png" alt="">
+    <div id="return">Return & Exchange Policy</div>
+    <div id="track">Track Order</div>
+    <div id="about">About Us</div>
+    <div id="conta">Contact Us</div>
+    <div id="blog">Blog</div>
+    <div id="refu">Refund Policy</div>
+    <div id="terms">Terms Of Policy</div>
+    <div id="sea">Search</div>
+    <div id="sign">SIGN UP AND SAVE</div>
+    <div id="sub">Subscribe to get special offers, free giveaways, and <br> once-in-a-lifetime deals.</div>
+    <div class="input-container">
+    <input type="email" placeholder="Enter your email">
+    <span class="icon"></span> <!-- email icon -->
+    </div>
+    <div class="face">
+        <img src="./facebook-circular-logo_20673.png" alt="">
+    </div>
+    <div class="cam">
+        <a href="https://www.instagram.com/ghadiyan_com"><img src="./camera_15047558.png" alt=""></a>
+    </div>
+    <div class="tik">
+        <img src="./tik-tok_3046120.png" alt="">
+    </div>
+    <div class="talk">
+        TALK TO US
+    </div>
+    <div class="chat">
+        Chat With Us
+    </div>
+    <div class="mon">
+        Monday - Saturday: 10am-10pm 
+    </div>
+    <div class="addr">
+        Address: A219 block 3 KDA Market Gulshan e <br> Iqbal Near Flourish Salon Karachi 
+    </div>
+    <div class="numb">
+        WhatsApp us: +92 309 2166701
+    </div>
+    <div class="cust">
+        Customer Support: helloghadiyan@gmail.com
+    </div>
+    <div class="copy">
+        © 2025 Ghadiyan
+    </div>
+</div>
+    
+</body>
+</html>
